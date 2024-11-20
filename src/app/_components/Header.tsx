@@ -2,6 +2,7 @@
 import { twMerge } from "tailwind-merge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFish } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   return (
@@ -15,10 +16,14 @@ const Header: React.FC = () => {
           )}
         >
           <div>
-            <FontAwesomeIcon icon={faFish} className="mr-1" />
-            Header
+            <Link href="/">
+              <FontAwesomeIcon icon={faFish} className="mr-1" />
+              Header
+            </Link>
           </div>
-          <div>About</div>
+          <div>
+            <Link href="/about">About</Link>
+          </div>
         </div>
       </div>
     </header>
