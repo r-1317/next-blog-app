@@ -5,3 +5,8 @@ rangav.vscode-thunder-client
 投稿記事一覧の取得 (microCMS)
 https://mj7ow6onkn.microcms.io/api/v1/posts
 X-MICROCMS-API-KEY
+
+1212  3.11 スキーマに変更を加えたときは…
+npm i -D prisma
+npm i -D ts-node
+.env DATABASE_URL="file:./dev.db"
