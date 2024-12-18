@@ -10,3 +10,5 @@ X-MICROCMS-API-KEY
 npm i -D prisma
 npm i -D ts-node
 .env DATABASE_URL="file:./dev.db"
+
+1218  4.3 カテゴリの一覧を取得するウェブAPIの実装
