@@ -12,3 +12,5 @@ npm i -D ts-node
 .env DATABASE_URL="file:./dev.db"
 
 1218  4.3 カテゴリの一覧を取得するウェブAPIの実装
+
+1219  4.5 カテゴリを追加するウェブAPIの実装
