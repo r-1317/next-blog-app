@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "next/navigation"; // ◀ 注目
 
 import type { Post } from "@/app/_types/Post";
+import type { PostApiResponse } from "@/app/_types/PostApiResponse";
 import dummyPosts from "@/app/_mocks/dummyPosts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
@@ -27,19 +28,33 @@ const Page: React.FC = () => {
     const fetchPosts = async () => {
       setIsLoading(true);
       try {
-        const requestUrl = `${apiBaseEp}/posts/${id}`;
+        const requestUrl = `/api/posts/${id}`;
         const response = await fetch(requestUrl, {
           method: "GET",
           cache: "no-store",
-          headers: {
-            "X-MICROCMS-API-KEY": apiKey,
-          },
+          // headers: {
+          //   "X-MICROCMS-API-KEY": apiKey,
+          // },
         });
         if (!response.ok) {
           throw new Error("データの取得に失敗しました");
         }
-        const data = await response.json();
-        setPost(data as Post);
+        const postApiResponse: PostApiResponse = await response.json();
+        setPost({
+          id: postApiResponse.id,
+          title: postApiResponse.title,
+          content: postApiResponse.content,
+          coverImage: {
+            url: postApiResponse.coverImageURL,
+            width: 1000,
+            height: 1000,
+          },
+          createdAt: postApiResponse.createdAt,
+          categories: postApiResponse.categories.map((category) => ({
+            id: category.category.id,
+            name: category.category.name,
+          })),
+        });
       } catch (e) {
         setFetchError(
           e instanceof Error ? e.message : "予期せぬエラーが発生しました"
