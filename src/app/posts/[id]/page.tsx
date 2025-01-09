@@ -15,6 +15,7 @@ import DOMPurify from "isomorphic-dompurify";
 const Page: React.FC = () => {
   const [post, setPost] = useState<Post | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [fetchError, setFetchError] = useState<string | null>(null);
 
   // 動的ルートパラメータから 記事id を取得 （URL:/posts/[id]）
   const { id } = useParams() as { id: string };

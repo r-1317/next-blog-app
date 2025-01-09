@@ -21,3 +21,6 @@ npm i -D ts-node
 
 0106  冬休みの宿題⛄  完了
 npm i dayjs
+
+0109  4.4 テーブルの削除
+.env
