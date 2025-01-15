@@ -24,3 +24,7 @@ npm i dayjs
 
 0109  4.4 テーブルの削除
 .env
+
+0115  第10回  最後まで
+npm i @supabase/supabase-js
+.env
