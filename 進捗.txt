@@ -28,3 +28,5 @@ npm i dayjs
 0115  第10回  最後まで
 npm i @supabase/supabase-js
 .env
+
+0116  2.3 フロントエンドプログラムの変更  ほぼ最初
