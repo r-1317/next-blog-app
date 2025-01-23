@@ -31,7 +31,7 @@ npm i @supabase/supabase-js
 
 0116  2.3 フロントエンドプログラムの変更  ほぼ最初
 
-0123  
+0123  3.3 ビルドスクリプトの編集  最初
 【未】画像アップロード
 npm i crypto-js
 npm i -D @types/crypto-js
