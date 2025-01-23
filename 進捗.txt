@@ -30,3 +30,8 @@ npm i @supabase/supabase-js
 .env
 
 0116  2.3 フロントエンドプログラムの変更  ほぼ最初
+
+0123  
+【未】画像アップロード
+npm i crypto-js
+npm i -D @types/crypto-js

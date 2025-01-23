@@ -1,5 +1,6 @@
 import prisma from "@/lib/prisma";
 import { NextResponse, NextRequest } from "next/server";
+export const revalidate = 0; // ◀ サーバサイドのキャッシュを無効化する設定
 
 // [GET] /api/categories カテゴリ一覧の取得
 export const GET = async (req: NextRequest) => {

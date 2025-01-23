@@ -2,6 +2,7 @@ import prisma from "@/lib/prisma";
 import { NextResponse, NextRequest } from "next/server";
 import { Post } from "@prisma/client";
 import { supabase } from "@/utils/supabase"; // ◀ 追加
+export const revalidate = 0; // ◀ サーバサイドのキャッシュを無効化する設定
 
 type RouteParams = {
   params: {
