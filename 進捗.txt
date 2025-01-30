@@ -35,3 +35,5 @@ npm i @supabase/supabase-js
 【未】画像アップロード
 npm i crypto-js
 npm i -D @types/crypto-js
+
+0130  
